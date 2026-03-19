@@ -84,3 +84,26 @@
 //     let heavy = await import ("./heavy.js");
 //     heavy.veryheavy()
 // })
+
+
+// Advanse Topics & Architecture Thinking
+
+// Seperation of Cencernus
+
+let btn=document.querySelector("button");
+let ul=document.querySelector("ul");
+
+function add(n1,n2){
+return n1+n2;
+}
+
+btn.addEventListener("click",function(){
+let num1=Math.floor(Math.random()*10);
+let num2=Math.floor(Math.random()*10);
+
+let Addition=add(num1,num2);
+
+let li=document.createElement("li");
+li.textContent=Addition;
+ul.appendChild(li);
+});
