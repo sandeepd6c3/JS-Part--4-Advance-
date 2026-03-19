@@ -111,7 +111,7 @@
 
 //  MakeMy Own MAP function
 
-let arr=[1,2,3,4,15];
+let arr=[1,2,3,4,5];
 
 function myMap(arr,callback){
     let newArr=[];
