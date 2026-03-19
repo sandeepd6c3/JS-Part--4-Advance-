@@ -90,20 +90,38 @@
 
 // Seperation of Cencernus
 
-let btn=document.querySelector("button");
-let ul=document.querySelector("ul");
+// let btn=document.querySelector("button");
+// let ul=document.querySelector("ul");
 
-function add(n1,n2){
-return n1+n2;
+// function add(n1,n2){
+// return n1+n2;
+// }
+
+// btn.addEventListener("click",function(){
+// let num1=Math.floor(Math.random()*10);
+// let num2=Math.floor(Math.random()*10);
+
+// let Addition=add(num1,num2);
+
+// let li=document.createElement("li");
+// li.textContent=Addition;
+// ul.appendChild(li);
+// });
+
+
+//  MakeMy Own MAP function
+
+let arr=[1,2,3,4,15];
+
+function myMap(arr,callback){
+    let newArr=[];
+
+    for(let i=0; i<arr.length; i++){
+newArr.push(callback(arr[i],i,arr));
+    }
+    return newArr;
+
 }
-
-btn.addEventListener("click",function(){
-let num1=Math.floor(Math.random()*10);
-let num2=Math.floor(Math.random()*10);
-
-let Addition=add(num1,num2);
-
-let li=document.createElement("li");
-li.textContent=Addition;
-ul.appendChild(li);
-});
+let ans=myMap(arr,function(val){
+    return val+2;
+})
